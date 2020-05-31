@@ -1,0 +1,8 @@
+def mostfrequent(string):
+    res={}
+    for i in string:
+        res[i]=res.get(i,0)+1
+        sortValue= sorted(res.items(), key=lambda x:x[1], reverse=True)
+    for i in sortValue:
+        print(i[0],"=",i[1])
+mostfrequent(input("enter a string :"))       
